@@ -2,7 +2,7 @@
 
 This document describes how to prepare the environment for the Gaussian Splatting part of this repository. It documents the **upstream** setup from the original Inria project.
 
-> **Status: not verified by the team.** The steps below come from `environment.yml`, `.gitmodules` and the upstream README ([upstream.md](upstream.md)). They have not been re-run end to end on the team's machines. `TBD` marks what still needs confirmation.
+> **Status: tested once, on one machine.** The installation ran on Terra's laptop (NVIDIA RTX 4070). No one else on the team had a machine able to run the model, so other setups are not verified. Driver: Windows display driver version `32.0.15.8183` (NVIDIA driver 581.83 in the usual numbering).
 
 ## Requirements
 
@@ -15,7 +15,7 @@ Versions pinned in `gaussian-splatting/environment.yml` (legacy):
 | torchvision / torchaudio | 0.13.1 / 0.12.1 |
 | CUDA toolkit | 11.6 |
 
-The upstream project requires an NVIDIA GPU with CUDA support. Hardware used by the team: `TBD`.
+The upstream project requires an NVIDIA GPU with CUDA support. The team's machine: laptop with an NVIDIA GeForce RTX 4070 (laptop GPU).
 
 ## Clone
 
@@ -49,12 +49,10 @@ conda activate gaussian_splatting
 ## Notes
 
 - `gaussian-splatting/.gitignore` excludes `output/`, `build/` and `*.pyc`. Trained models go to `output/`.
-- `gaussian-splatting/venv/` (about 373 MB, roughly 7,600 files) and `gaussian-splatting/cuda-keyring_1.1-1_all.deb` are **tracked by git** in the current clone. They should not be part of the repository. Removal is pending a decision: `TBD`.
+- `gaussian-splatting/venv/` (about 373 MB, roughly 7,600 files) and `gaussian-splatting/cuda-keyring_1.1-1_all.deb` are **kept in the repository** by the team's choice.
 - `Results/Capture_EVA.gif` (59 MB) is **not tracked by git**. A clean clone does not include it, so copy it by hand.
 - The Unity project is not part of this repository (see the root README).
 
 ## Open questions
 
-- Was the environment installed and run successfully on the team's machines? `TBD`
-- Which GPU and driver versions were used? `TBD`
-- Should `venv/` and the `.deb` be removed from git history or only from the index? `TBD`
+- None on the driver. Other machines: not tested.

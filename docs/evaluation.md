@@ -2,7 +2,7 @@
 
 This document explains how the upstream evaluation scripts work and where the charts come from.
 
-> **Important:** the charts in [`results.md`](../gaussian-splatting/results.md) come from the upstream project (MipNeRF360, Tanks&Temples, Deep Blending). Their exact origin for this fork is **not confirmed**. They are not results measured by the BPCE team. No evaluation of the captured BPCE scene has been run yet (`TBD`).
+> **Important:** the charts in [`results.md`](../gaussian-splatting/results.md) were added to the upstream project by its maintainers (2024, see the upstream git history). They show the upstream project's results on MipNeRF360, Tanks&Temples and Deep Blending. The team did not produce them and has not re-run them. No evaluation of the captured BPCE scene has been run yet.
 
 ## Scripts
 
@@ -27,8 +27,3 @@ This document explains how the upstream evaluation scripts work and where the ch
 ## Metrics
 
 Features compared in `results.md`: default vs accelerated rasterizer, depth regularization (DR), antialiasing (AA), exposure compensation, and two optimizers (default and sparse Adam, for the accelerated rasterizer).
-
-## Next steps
-
-- Run the pipeline on the BPCE capture and report metrics here, if a reference is available: `TBD`
-- Confirm the origin of the upstream charts before citing them as results: `TBD`

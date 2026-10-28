@@ -6,37 +6,35 @@ A rapid proof of concept built during the Epitech x BPCE hackathon. The goal was
 
 Full demo video: [Results/Capture_EVA.mp4](Results/Capture_EVA.mp4)
 
-> **Status:** proof of concept, built quickly during a hackathon. It is not a production system.
+> **Status:** proof of concept, built quickly during a hackathon in January 2026. It was presented to a BPCE jury. It is not an official BPCE publication and not a production system.
 
-## What the team built
+## Team
 
-- **Concept and idea:** Terra
-- **Video capture:** Terra, on a Pixel 7 Pro with default camera settings
-- **AI training (Gaussian Splatting):** Terra
-- **Unity implementation:** Terra, most of the work
-- **Team:** Terra, with classmates and fellow students. Full list of members: `TBD`
+- **Terra** ([Mr-terra](https://github.com/Mr-terra)): idea, brainstorming, video, AI training (Gaussian Splatting), Unity implementation (most of the work), and the technical part of the on-stage presentation
+- **Axel** ([AxlMrt](https://github.com/AxlMrt)): project support and proposals, found the pre-trained AI model used for the project, helped with brainstorming and the video
+- **Laurent** ([LaurentLF2023](https://github.com/LaurentLF2023)): presentation, economic model for integrating the project, and the commercial pitch
 
 The Gaussian Splatting code is not written by the team. It is the official implementation from Inria, included in [gaussian-splatting/](gaussian-splatting/) (see [Credits](#credits)).
 
-The Unity and AI parts combine two existing open projects rather than being written from scratch:
+The Unity and AI parts combine existing projects rather than being written from scratch:
 
-- Project 1: `TBD` (name and link)
-- Project 2: `TBD` (name and link)
-- Final Unity project: `TBD` (not included in this repository; publish or cite)
+- Project 1: Gaussian Splatting fork, [Mr-terra/Hackaton-BPCE-Gaussian-Splatting](https://github.com/Mr-terra/Hackaton-BPCE-Gaussian-Splatting). The demo scene is not pushed there yet.
+- Project 2: the Unity project. It is not available, so it is not included in this repository.
+- AI model: the 3D Gaussian Splatting method from the upstream project. Pre-trained models are published on the [upstream project page](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) (see [docs/upstream.md](docs/upstream.md)).
 
 ## Stack
 
+- **Unity:** 2022.3.47f1
+- **Target device:** Meta Quest (2 or 3)
 - **Gaussian Splatting:** upstream Inria implementation, PyTorch and CUDA
-- **Unity:** `TBD`
-- **Target device (VR headset):** `TBD`
 
 ## Results
 
-No quantitative evaluation of the BPCE capture has been run yet. The charts in [gaussian-splatting/results.md](gaussian-splatting/results.md) come from the upstream project and are not results measured by this team.
+No quantitative evaluation of the BPCE capture has been run yet. The charts in [gaussian-splatting/results.md](gaussian-splatting/results.md) were added by the upstream project maintainers (see the upstream git history). They are not measured by this team.
 
 ## Quick start
 
-Gaussian Splatting part (upstream setup, not yet verified by the team):
+Gaussian Splatting part. Tested by the team on one machine (laptop with an NVIDIA RTX 4070):
 
 ```bash
 git clone https://github.com/Mr-terra/project-EVA.git
@@ -64,9 +62,9 @@ Evaluation scripts and metrics are in [docs/evaluation.md](docs/evaluation.md).
 
 - Proof of concept built in a hackathon timeframe. Not tested at scale or in production.
 - Relies on legacy versions: Python 3.7.13, PyTorch 1.12.1, CUDA 11.6.
-- Reproducibility of the team's setup is not verified. Only the upstream setup is documented.
+- The installation was run on one machine only. Other setups are not verified.
+- Training takes about 3-4 hours on a laptop RTX 4070 to reach a visible result.
 - The Gaussian Splatting code and part of the Unity and AI work come from existing projects.
-- Training time and hardware used by the team: `TBD`.
 - The git history contains about 250 MB of MP4 files, so cloning takes a while.
 
 ## Credits
@@ -88,12 +86,15 @@ Evaluation scripts and metrics are in [docs/evaluation.md](docs/evaluation.md).
 
 Original README, with paper links, datasets and viewer instructions: [docs/upstream.md](docs/upstream.md).
 
-**Combined projects:** `TBD` (see [What the team built](#what-the-team-built)).
+**Combined projects:** see [Team](#team).
 
 **Hackathon:** Epitech x BPCE.
 
+**Posts about the project** (LinkedIn, not official publications):
+- https://lnkd.in/p/ek92igXw
+- https://lnkd.in/p/erGKB28D
+- https://lnkd.in/p/ek-k9YcV
+
 ## License
 
-The upstream code is under the Inria license in [gaussian-splatting/LICENSE.md](gaussian-splatting/LICENSE.md). It permits **non-commercial use only** (research and evaluation). The license does not allow commercial exploitation or distribution for commercial purposes.
-
-The license for the team's own additions: `TBD`.
+This repository is released under the same license as the upstream code: the Gaussian-Splatting License from Inria and MPII, in [gaussian-splatting/LICENSE.md](gaussian-splatting/LICENSE.md). It permits **non-commercial use only** (research and evaluation). It does not allow commercial exploitation or distribution for commercial purposes. This applies to the team's additions as well.

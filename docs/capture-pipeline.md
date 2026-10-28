@@ -2,7 +2,7 @@
 
 This document describes how the input data for the demo scene was captured and how it is converted for training.
 
-> **Status: partially documented.** The capture device and settings are verified. The exact processing steps the team ran (COLMAP options, number of frames, training iterations) are `TBD`.
+> **Status: partially documented.** The capture device and settings are verified. The exact processing steps the team ran (COLMAP options, number of frames, training iterations) are not documented.
 
 ## Capture
 
@@ -42,10 +42,5 @@ Training command, from the upstream project:
 python train.py -s <path/to/scene>
 ```
 
-Team training settings, iteration count and duration: `TBD`.
+Training on the team's machine took about 3-4 hours on a laptop with an NVIDIA RTX 4070 GPU, to reach a visible result. The iteration count and other settings used are not documented.
 
-## Open questions
-
-- Number of input frames extracted from the videos: `TBD`
-- Whether the COLMAP step used GPU: `TBD`
-- Which iteration count produced the demo: `TBD`
